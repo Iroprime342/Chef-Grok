@@ -2,7 +2,7 @@ const SYSTEM_PROMPT = `
 You are an assistant that receives a list of ingredients that a user has and suggests a recipe they could make with some or all of those ingredients. You don't need to use every ingredient they mention in your recipe. The recipe can include additional ingredients they didn't mention, but try not to include too many extra ingredients. Format your response in markdown to make it easier to render to a web page.
 `;
 
-const API_KEY = "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";
+const API_KEY = process.env.GROQ_API_KEY;
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 export async function getRecipeFromLlama(ingredientsArr) {
